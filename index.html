@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炫彩贪吃蛇</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>炫彩贪吃蛇</h1>
+        <div class="game-header">
+            <div class="score">分数: <span id="score">0</span></div>
+            <div class="high-score">最高分: <span id="highScore">0</span></div>
+        </div>
+        <div class="game-settings">
+            <select id="difficulty">
+                <option value="easy">简单</option>
+                <option value="medium">中等</option>
+                <option value="hard">困难</option>
+            </select>
+            <label class="sound-toggle">
+                <input type="checkbox" id="soundToggle" checked>
+                音效
+            </label>
+            <label class="sound-toggle">
+                <input type="checkbox" id="musicToggle" checked>
+                背景音乐
+            </label>
+        </div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="controls">
+            <button id="startBtn">开始游戏</button>
+            <button id="pauseBtn">暂停</button>
+            <button id="restartBtn">重新开始</button>
+        </div>
+        <div class="game-info">
+            <h3>游戏说明：</h3>
+            <ul>
+                <li>普通食物: +10分</li>
+                <li>金色食物: +30分，临时加速</li>
+                <li>红心食物: +20分，增加1条命</li>
+                <li>闪电食物: +15分，临时减速</li>
+            </ul>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
